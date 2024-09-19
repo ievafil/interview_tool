@@ -1,0 +1,274 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background similar to Google's */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #1967d2; /* Google blue */
+    font-weight: normal;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Ensure elements are listed vertically */
+    gap: 15px; /* Add space between each input element */
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5f6368; /* Gray tone for labels */
+}
+
+/* Input elements */
+textarea, input, select {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #202124;
+    box-sizing: border-box;
+}
+
+/* Focus state for input elements */
+textarea:focus, input:focus, select:focus {
+    border-color: #4285f4; /* Google blue on focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.3); /* Subtle blue shadow on focus */
+}
+
+/* Buttons */
+button {
+    font-size: 18px; /* Increased font size */
+    padding: 12px 30px; /* More padding for better spacing */
+    background-color: #4285f4; /* Google-style blue */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #357ae8; /* Darker shade of blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+button:active {
+    background-color: #1967d2; /* Darker blue when active */
+}
+
+/* Avatar container for images */
+.avatar-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Avatar dropdown */
+.avatar-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Dropdown button styling */
+.avatar-dropdown .dropdown-button {
+    background-color: white;
+    border: 1px solid #dadce0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left align text and image */
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Avatar image within dropdown */
+.avatar-dropdown .dropdown-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Text within dropdown button */
+.avatar-dropdown .dropdown-button span {
+    font-size: 16px;
+    color: #202124;
+    text-align: left;
+}
+
+/* Dropdown content */
+.avatar-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Avatar dropdown items */
+.avatar-dropdown .dropdown-content div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Avatar images in the dropdown */
+.avatar-dropdown .dropdown-content div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Hover state for dropdown items */
+.avatar-dropdown .dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ensure the avatar dropdown button can receive focus */
+.avatar-dropdown .dropdown-button {
+    background-color: white;
+    border: 1px solid #dadce0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left align text and image */
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #202124;
+    /* Add this line to ensure the button can be focused */
+    outline: none; /* Remove default outline if any */
+}
+
+/* Focus state for the dropdown button */
+.avatar-dropdown .dropdown-button:focus {
+    border-color: #4285f4; /* Google blue border on focus */
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.3); /* Subtle blue shadow on focus */
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #4285f4;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.info-icon {
+    font-size: 16px;
+    color: #4285f4;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Style the logo */
+.logo {
+    width: 400px; /* Adjust logo size */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Center the logo and add spacing below */
+}
+
+/* INTRO PAGE */
+.intro-text {
+    font-size: 1.2em;
+    color: #5f6368; /* Gray similar to Google's label color */
+    margin-bottom: 20px;
+}
+
+.info-text {
+    font-size: 1.2em;
+    color: #5f6368; /* Gray similar to Google's label color */
+    margin-bottom: 20px;
+}
+
+.intro-video {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #dadce0; /* Light gray border similar to input fields */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow similar to input fields */
+}
+
+/* Button styling */
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #4285f4; /* Google blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: none; /* Hidden initially */
+}
+
+.btn-primary:hover {
+    background-color: #357ae8; /* Slightly darker blue on hover */
+}
+
+#continueButton {
+    display: none; /* Hide button initially */
+    margin-top: 20px; /* Space above the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,6 @@
+Flask
+requests
+SpeechRecognition
+opencv-python
+google-generativeai
+python-dotenv

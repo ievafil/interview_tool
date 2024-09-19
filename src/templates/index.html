@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/images/icon.png" type="image/png">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Replace heading with logo image -->
+        <img src="/static/images/logo.jpg" alt="AI-Powered Interview Tool Logo" class="logo">
+
+        <form action="/generate-questions" method="POST">
+            <div class="form-container">
+
+                <!-- Job Description Field -->
+                <label for="job_description">Job Description or Link:
+                    <span class="tooltip">
+                        <span class="info-icon">ℹ️</span>
+                        <span class="tooltiptext">Enter (or copy paste) the job description or a link to the job posting to tailor your interview questions.</span>
+                    </span>
+                </label>
+                <textarea id="job_description" name="job_description" placeholder="Enter job description or job link..." required></textarea>
+
+                <!-- Number of Questions Field -->
+                <label for="num_questions">Number of questions:
+                    <span class="tooltip">
+                        <span class="info-icon">ℹ️</span>
+                        <span class="tooltiptext">Choose how many interview questions you want to practice (between 2 and 10).</span>
+                    </span>
+                </label>
+                <input type="number" id="num_questions" name="num_questions" min="2" max="10" value="3" required>
+
+                <!-- Avatar Selection with Images -->
+                <label for="avatar">Choose an avatar:
+                    <span class="tooltip">
+                        <span class="info-icon">ℹ️</span>
+                        <span class="tooltiptext">Select the personality of the interviewer based on these avatars.</span>
+                    </span>
+                </label>
+                <div class="avatar-dropdown">
+                    <div class="dropdown-button selected-avatar" tabindex="0">
+                        <img src="/static/images/sophia-ndjDZ_Osqg.png" alt="Sophia"> <span>Sophia</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <div data-value="Sophia" data-name="Sophia">
+                            <img src="/static/images/sophia-ndjDZ_Osqg.png" alt="Sophia"> Sophia
+                        </div>
+                        <div data-value="Matt" data-name="Matt">
+                            <img src="/static/images/matt-PEvEohn_gk.png" alt="Matt"> Matt
+                        </div>
+                        <div data-value="Diana" data-name="Diana">
+                            <img src="/static/images/diana-tfTP6K9S9u.png" alt="Diana"> Diana
+                        </div>
+                    </div>
+                    <input type="hidden" name="avatar" id="avatar" value="Sophia">
+                </div>
+                <!-- Complexity Field -->
+                <label for="complexity">Interview Complexity:
+                    <span class="tooltip">
+                        <span class="info-icon">ℹ️</span>
+                        <span class="tooltiptext">Choose the difficulty level of the interview questions (beginner, intermediate, or complex).</span>
+                    </span>
+                </label>
+                <select id="complexity" name="complexity">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="complex">Complex</option>
+                </select>
+
+                <button type="submit" id="generate_questions">Next: Start Interview</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to toggle dropdown
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const avatarInput = document.getElementById('avatar');
+
+        // Toggle dropdown when button is clicked
+        dropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Select avatar from dropdown
+        dropdownContent.querySelectorAll('div').forEach(option => {
+            option.addEventListener('click', () => {
+                const selectedAvatar = option.dataset.value;
+                const selectedAvatarName = option.dataset.name;
+                const imgSrc = option.querySelector('img').src;
+
+                // Update dropdown button to show the selected avatar and name
+                dropdownButton.innerHTML = `<img src="${imgSrc}" alt="${selectedAvatarName}"> <span>${selectedAvatarName}</span>`;
+                
+                // Set the hidden input value to the selected avatar
+                avatarInput.value = selectedAvatar;
+
+                // Close the dropdown
+                dropdownContent.style.display = 'none';
+            });
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', () => {
+            dropdownContent.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
