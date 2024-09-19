@@ -56,21 +56,26 @@ Our goal was simple: **build an app** that helps you **practice your interviewin
 ## Project Tree ⚙️
 
       ├── src
-      │    ├── app.py                    # Main Flask application file
-      │    ├── gemini_service.py         # Interactions with the Gemini API for generating scripts, questions, and feedback
+      │    ├── app.py                       # Main Flask application file
+      │    ├── detect_link.py               # Detect corresponding links to job sites
+      │    ├── gemini_service.py            # Interactions with the Gemini API for generating scripts, questions, and feedback
+      │    ├── generate_avatar.py           # Generate a video of an avatar speaking the given input text
+      │    ├── webscrape_jobs_indeed.py     # Retrieve the job title and description for an Indeed job.
+      │    ├── webscrape_jobs_linkedin.py   # Retrieve the job title and description for an Linkedin job.
+      │    ├── webscrape_jobs_totaljobs.py  # Retrieve the job title and description for an Totaljobs job.
       │    ├── static/
-      │    │   └── videos/               # Folder to store generated video files
-      │    │   └── images/               # Avatar and logo images
-      │    │   └── style.css             # Application css
-      │    ├── templates/                # HTML templates
-      │    │   ├── index.html            # Homepage template
-      │    │   ├── loading.html          # Loading screen template for question generation
-      │    │   ├── intro.html            # Introduction script template
-      │    │   ├── record.html           # Template for recording responses
-      │    │   ├── feedback.html         # Feedback display template
-      │    │   ├── feedback_loading.html # Feedback processing template
-      │    │   └── error.html            # Error message template
-      │    └── uploads/                  # Folder to store uploaded interview recording
+      │    │   └── videos/                  # Folder to store generated video files
+      │    │   └── images/                  # Avatar and logo images
+      │    │   └── style.css                # Application css
+      │    ├── templates/                   # HTML templates
+      │    │   ├── index.html               # Homepage template
+      │    │   ├── loading.html             # Loading screen template for question generation
+      │    │   ├── intro.html               # Introduction script template
+      │    │   ├── record.html              # Template for recording responses
+      │    │   ├── feedback.html            # Feedback display template
+      │    │   ├── feedback_loading.html    # Feedback processing template
+      │    │   └── error.html               # Error message template
+      │    └── uploads/                     # Folder to store uploaded interview recording
       └── README.md
       └── requirements.txt
 
