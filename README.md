@@ -41,10 +41,14 @@ Our goal was simple: **build an app** that helps you **practice your interviewin
    pip install -r requirements.txt
    cd src
 
-3. **Create an .env file in the src directory with your Gemini API key:**
+3. **Create an .env file in the src directory with your API keys:**
    ```bash
-   touch .env
-   echo "API_KEY=\"<INSERT_API_KEY>\"" > .env
+   # Gemini API key
+   GEMINI_API_KEY=<INSERT_API_KEY>
+   # Scrapfly API key
+   SCRAPFLY_API_KEY=<INSERT_API_KEY>
+   # D-iD API key
+   DID_API_KEY=<INSERT_API_KEY>
    
 4. **Run the application:**
    ```bash
