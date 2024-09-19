@@ -6,7 +6,7 @@
 Welcome to **AnInterviewer AI Interview Assistant** – your ultimate companion for conducting AI-powered, dynamic interviews! This app brings together the power of **Flask** and **Gemini API** to create a seamless interview experience with **auto-generated questions**, **video responses**, and **AI-driven feedback**. Whether you're a recruiter or preparing for interviews, this app provides personalized, interactive interview experiences like never before! 
 
 
-In today’s age of remote work and online interviews, we saw a gap – a tool that not only **prepares you for interviews** but also allows you to **simulate the experience** with **personalized questions and video recording**. While **[Google's Interview Warmup](https://grow.google/certificates/interview-warmup/)**  offers a decent practice tool, it lacks video recording and job-specific question generation. We wanted to create something more personal, user-friendly, and designed to replicate the real-world experience more closely.
+In today’s age of remote work and online interviews, we saw a gap – a tool that not only **prepares you for interviews** but also allows you to **simulate the experience** with **personalized questions and video recording**. We wanted to create something personal, user-friendly, and designed to replicate the real-world experience more closely.
 
 Our goal was simple: **build an app** that helps you **practice your interviewing skills** with meaningful AI-driven feedback – just like feedback you’d expect from an experienced interviewer.
 
