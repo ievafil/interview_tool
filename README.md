@@ -23,6 +23,8 @@ Our goal was simple: **build an app** that helps you **practice your interviewin
 
 ## Prerequisites ⚙️
 * **[Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key)**
+* **[Scrapfly API Key](https://scrapfly.io/dashboard)**
+* **[D-iD API Key](https://docs.d-id.com/reference/get-started)**
 * Flask
 * Python 3.x
 * Libraries in `requirements.txt`
