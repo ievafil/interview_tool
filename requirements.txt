@@ -4,3 +4,5 @@ SpeechRecognition
 opencv-python
 google-generativeai
 python-dotenv
+parsel
+scrapfly-sdk
