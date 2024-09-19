@@ -10,6 +10,8 @@ In today’s age of remote work and online interviews, we saw a gap – a tool t
 
 Our goal was simple: **build an app** that helps you **practice your interviewing skills** with meaningful AI-driven feedback – just like feedback you’d expect from an experienced interviewer.
 
+## Demo
+[![Demo of AnInterviewer AI Assistant](https://img.youtube.com/vi/4f2cIyPz0Ic/0.jpg)](https://www.youtube.com/watch?v=4f2cIyPz0Ic)
 
 ## Features 💡
 
