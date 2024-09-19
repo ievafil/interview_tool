@@ -185,17 +185,3 @@ def get_interview_feedback_from_gemini(job_description, video_file_path):
     except Exception as e:
         print(f"Error generating feedback: {e}")
         return "There was an error when requesting interview feedback. Please try again later."
-
-
-def generate_video_for_question(question_text, video_path, avatar):
-    """
-    Generates a video for the given interview question.
-    The video contains text-to-speech audio and text overlaid on the video.
-    
-    Args:
-        question_text (str): The question that will be turned into a video.
-        video_path (str): The path to save the generated video.
-        avatar (str): The avatar of the generated video.
-    """
-    # Implement actual video generation logic here
-    pass
